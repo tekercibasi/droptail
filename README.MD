@@ -49,8 +49,8 @@ Das Cocktail-Bestellsystem ist eine Webapplikation für Restaurants, die es Kund
 
 1. Klonen Sie das Repository:
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone git@github.com:tekercibasi/droptail.git
+    cd droptail
     ```
 
 2. Installieren Sie die Abhängigkeiten:
