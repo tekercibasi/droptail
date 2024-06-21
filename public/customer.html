@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Interface</title>
+    <!-- Link zum Sketchy-Theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="customer" class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Order Cocktails</h2>
+                <div id="search-bar" class="mb-4">
+                    <input type="text" id="search-cocktail" class="form-control form-control-lg" placeholder="Search for a cocktail (name, ingredient ...)">
+                </div>
+        
+                <ul id="cocktail-list" class="list-group"></ul>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2>Order History</h2>
+                <ul id="order-history" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals for recipe and image -->
+    <div class="modal" id="recipeModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Recipe</h5>
+                    <button type="button" class="close" id="closeModal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="modal-ingredients" class="mb-4"></div>
+                    <p id="modal-recipe"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="imageModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Image</h5>
+                    <button type="button" class="close" id="closeImageModal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-image" src="" alt="Cocktail Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/dom.js"></script>
+    <script type="module" src="js/api.js"></script>
+    <script type="module" src="js/customer.js"></script>
+</body>
+</html>

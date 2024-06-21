@@ -1,0 +1,17 @@
+{
+  "name": "cocktail-order-system",
+  "version": "1.0.0",
+  "description": "A simple cocktail order system for a restaurant.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.5-lts.1",
+    "nano": "^8.2.2",
+    "path": "^0.12.7",
+    "ws": "^8.17.1"
+  }
+}

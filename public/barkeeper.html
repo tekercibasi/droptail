@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Barkeeper Interface</title>
+        <!-- Link zum Sketchy-Theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body id="barkeeper" class="pt-5 pb-5">
+        <div class="container">
+            <h2>Manage Orders</h2>
+        <div class="row mt-4">
+            <div class="col-12" id="order-list">
+                <h4>Current Orders</h4>
+                <ul class="list-group"></ul>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12" id="order-history">
+                <h4>Order history</h4>
+                <ul  class="list-group"></ul>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12" id="cocktail-list">
+                <h2>Manage Cocktails <button type="button" class="btn btn-success btn-lg" id="addNewCocktail">&plus; add new Cocktail</button></h2> 
+                <ul  class="list-group"></ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modals for recipe and image -->
+    <div class="modal" id="recipeModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Recipe for <span id="modal-title"></span></h5>
+                    <button type="button" class="close" id="closeModal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="modal-ingredients" class="mb-4"></div>
+                    <p id="modal-recipe"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="imageModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Image</h5>
+                    <button type="button" class="close" id="closeImageModal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-image" src="" alt="Cocktail Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="createCocktailModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Image</h5>
+                    <button type="button" class="close" id="closeCreateCocktailModal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="col-12">
+                            <h2 id="form-title">Create / Edit Cocktail</h2>
+                            <form id="cocktail-form">
+                                <input type="hidden" id="form-id">
+                                <div class="form-group">
+                                    <label for="title">Title:</label>
+                                    <input type="text" class="form-control" id="title" name="title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Description:</label>
+                                    <input type="text" class="form-control" id="description" name="description" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ingredients">Ingredients:</label>
+                                    <input type="text" class="form-control" id="ingredients" name="ingredients" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipe">Recipe:</label>
+                                    <input type="text" class="form-control" id="recipe" name="recipe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="image">Image:</label>
+                                    <input type="file" class="form-control-file" id="image" name="image">
+                                </div>
+                                <button type="submit" id="form-button" class="btn btn-primary">Create Cocktail</button>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/dom.js"></script>
+    <script type="module" src="js/api.js"></script>
+    <script type="module" src="js/barkeeper.js"></script>
+</body>
+</html>
